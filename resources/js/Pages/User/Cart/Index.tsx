@@ -490,5 +490,6 @@ export default function Index() {
 }
 
 Index.layout = (page: any) => (
-    <GuestLayout head="Keranjang">{page}</GuestLayout>
+    <GuestLayout head="Keranjang" description="This is the cart page"
+        titleDescription="Your Shopping Cart">{page}</GuestLayout>
 );

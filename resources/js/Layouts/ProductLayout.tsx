@@ -5,15 +5,13 @@ import GuestLayout from "./GuestLayout";
 interface Props {
     children: React.ReactNode;
     head?: any;
-    description: string;
-    titleDescription: string;
 }
 
-export default function ProductLayout({ children, head, description, titleDescription}: Props) {
+export default function ProductLayout({ children, head}: Props) {
     const { productCategory, url } = usePage<PageProps>().props;
 
     return (
-        <GuestLayout head={head} description={description} titleDescription={titleDescription}>
+        <GuestLayout head={head} description="" titleDescription="">
             <section className=" mt-24 lg:mt-32 md:px-16   flex container gap-5 px-4 lg:px-20 relative">
                 <div className="w-1/4 hidden lg:block">
                     <div className="bg-white p-4 border sticky top-20 rounded-xl flex flex-col">

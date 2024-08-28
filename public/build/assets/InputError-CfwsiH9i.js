@@ -1,0 +1,1 @@
+import{j as e}from"./app-C07MtfD9.js";import{C as l}from"./circle-alert-CR7MK8J5.js";function m({message:r,className:t="",...s}){return r?e.jsxs("p",{...s,className:"text-sm text-red-600 flex items-center gap-2 bg-red-100 p-2 rounded-lg "+t,children:[e.jsx(l,{className:"w-4 h-4"}),r]}):null}export{m as I};

@@ -20,7 +20,11 @@ import Spinner from "@/Components/Spinner";
 import RadioCustom from "@/Components/RadioCutom";
 import NoImage from "../../../../../public/img/no_image.jpg";
 
-const Create: React.FC = () => {
+interface CreateProps {
+    onSuccess: (newTabValue: string) => void;
+}
+
+const Create: React.FC<CreateProps> = ({ onSuccess }) => {
     const { data, setData, post, processing, errors, reset } = useForm({
         name: "",
         description: "",
@@ -125,7 +129,10 @@ const Create: React.FC = () => {
         e.preventDefault();
         post(route("admin.product.store"), {
             forceFormData: true,
-            onSuccess: () => reset("name", "image"),
+            onSuccess: () => {
+                reset("name", "image");
+                onSuccess("someNewTabValue");
+            },
             preserveScroll: true,
         });
     };
